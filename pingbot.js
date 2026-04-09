@@ -70,8 +70,8 @@ const client = new Client({
     GatewayIntentBits.MessageContent,
     GatewayIntentBits.GuildMembers,
   ],
-  gatewayUrl: "wss://realtime.jubbio.com/ws/bot",
-  apiUrl: "https://gateway.jubbio.com/api/v1",
+  gatewayUrl: "wss://realtime.jubbio.com/ws/bot/565279110973100032/",
+  apiUrl: "https://gateway.jubbio.com/api/v1/565279110973100032/",
 });
 
 // ─── READY OLAYI ───────────────────────────────────────────────────

@@ -16,6 +16,7 @@ const client = new Client({
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMessages,
     GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildMembers,
   ],
   gatewayUrl: "wss://realtime.jubbio.com/ws/bot",
   apiUrl: "https://gateway.jubbio.com/api/v1",

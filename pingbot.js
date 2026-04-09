@@ -110,39 +110,38 @@ client.on("messageCreate", async (message) => {
     return message.reply({ embeds: [embed] });
   }
 
-  // ─── BOT İSTATİSTİK ─────────────────────────────────────────────
-  if (cmd === "botistatistik" || cmd === "botstats") {
-    const botUptime = Date.now() - botStartTime;
-    const botUptimeStr = formatUptime(botUptime);
-    
-    // Rastgele istatistikler
-    const randomCommands = Math.floor(Math.random() * 10000) + 1000;
-    const randomUsers = Math.floor(Math.random() * 5000) + 100;
-    const randomMessages = Math.floor(Math.random() * 100000) + 10000;
-    
-    const stats = getSystemStats();
-    
-    const embed = new EmbedBuilder()
-      .setTitle("🤖 PingBot İstatistikleri")
-      .setColor(Colors.Gold)
-      .setThumbnail(client.user?.avatarURL())
-      .addFields(
-        { name: "📊 Sunucu Sayısı", value: `\`${client.guilds.size}\``, inline: true },
-        { name: "⏱️ Bot Çalışma Süresi", value: `\`${botUptimeStr}\``, inline: true },
-        { name: "📝 Toplam Komut", value: `\`${randomCommands}\``, inline: true },
-        { name: "👥 Aktif Kullanıcı", value: `\`${randomUsers}\``, inline: true },
-        { name: "💬 İşlenen Mesaj", value: `\`${randomMessages}\``, inline: true },
-        { name: "🖥️ Sistem CPU", value: `\`${stats.cpu}%\``, inline: true },
-        { name: "💾 Sistem RAM", value: `\`${stats.ram}%\``, inline: true },
-        { name: "🆔 Bot ID", value: `\`${client.user?.id}\``, inline: true },
-        { name: "📅 Son Başlatma", value: `<t:${Math.floor(botStartTime / 1000)}:R>`, inline: true }
-      )
-      .setFooter({ text: "PingBot • Jubbio" })
-      .setTimestamp();
-    
-    return message.reply({ embeds: [embed] });
-  }
+// ─── BOT MONİTOR (Sistem Durumu) ────────────────────────────────
+if (cmd === "botmonitor" || cmd === "monitor") {
+  const stats = getSystemStats();
+  
+  // CPU ve RAM için progress bar oluştur (düzeltilmiş)
+  const cpuBar = createProgressBar(parseFloat(stats.cpu));
+  const ramBar = createProgressBar(parseFloat(stats.ram));
+  
+  const embed = new EmbedBuilder()
+    .setTitle("🖥️ PingBot Server Monitor")
+    .setColor(Colors.Blue)
+    .addFields(
+      { name: "⏱️ Uptime", value: `\`${stats.uptime}\``, inline: false },
+      { name: "🖥️ CPU", value: `\`${stats.cpu}%\` ${cpuBar}`, inline: true },
+      { name: "💾 RAM", value: `\`${stats.ram}%\` ${ramBar}\n${stats.ramUsed}GB / ${stats.ramTotal}GB`, inline: true },
+      { name: "💿 Sistem", value: `\`${stats.platform}\` \`${stats.arch}\``, inline: true },
+      { name: "🖧 Hostname", value: `\`${stats.hostname}\``, inline: true }
+    )
+    .setFooter({ text: "PingBot • Jubbio" })
+    .setTimestamp();
+  
+  return message.reply({ embeds: [embed] });
+}
 
+// ─── Yardımcı Fonksiyonlar ────────────────────────────────────────
+function createProgressBar(percent) {
+  const filled = Math.floor(percent / 10);
+  const empty = 10 - filled;
+  // █ = dolu, ░ = boş (veya 🟩 ve ⬜ kullan)
+  return "█".repeat(filled) + "░".repeat(empty);
+}
+  
   // ─── YARDIM KOMUTU ──────────────────────────────────────────────
   if (cmd === "yardim" || cmd === "help") {
     const embed = new EmbedBuilder()

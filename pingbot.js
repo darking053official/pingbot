@@ -1,5 +1,5 @@
 const { JubbioClient, CommandBuilder } = require('@jubbio/core');
-require('dotenv').config();
+require('dotenv')
 const os = require('os');
 
 const client = new JubbioClient({
@@ -67,4 +67,4 @@ client.on('commandExecute', (command, result) => {
     console.table(result);
 });
 
-client.connect(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);

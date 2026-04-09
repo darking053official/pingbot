@@ -1,0 +1,15 @@
+{
+  "name": "pingbot",
+  "version": "1.0.0",
+  "description": "Jubbio ping botu",
+  "main": "pingbot.js",
+  "scripts": {
+    "start": "node pingbot.js"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "dependencies": {
+    "@jubbio/core": "^1.0.0"
+  }
+}

@@ -5,6 +5,12 @@ const client = new Client({
   intents: 3276799 // Tüm intent'ler
 });
 
+// ── HTTP Sunucu (Port 10000) ─────────────────────────────────────
+http.createServer((req, res) => {
+  res.writeHead(200, { "Content-Type": "application/json" });
+  res.end(JSON.stringify({ status: "online", bot: "PingBot", platform: "Jubbio" }));
+}).listen(10000, () => console.log("🌐 HTTP sunucu port 10000'de çalışıyor."));
+
 // Bot başlangıç zamanı
 const botStartTime = Date.now();
 

@@ -1,20 +1,36 @@
 const { Client, GatewayIntentBits, EmbedBuilder, Colors } = require("@jubbio/core");
+const http = require("http");
 const os = require("os");
 
 const client = new Client({
   intents: 3276799 // Tüm intent'ler
 });
 
-// ── HTTP Sunucu (Port 10000) ─────────────────────────────────────
-http.createServer((req, res) => {
-  res.writeHead(200, { "Content-Type": "application/json" });
-  res.end(JSON.stringify({ status: "online", bot: "PingBot", platform: "Jubbio" }));
-}).listen(10000, () => console.log("🌐 HTTP sunucu port 10000'de çalışıyor."));
+// ─── HTTP SUNUCU (Render için) ─────────────────────────────────────
+const PORT = process.env.PORT || 10000;
+const server = http.createServer((req, res) => {
+  if (req.url === "/") {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(JSON.stringify({ 
+      status: "online", 
+      bot: client.user?.username || "PingBot",
+      uptime: process.uptime(),
+      guilds: client.guilds?.size || 0
+    }));
+  } else {
+    res.writeHead(404);
+    res.end();
+  }
+});
 
-// Bot başlangıç zamanı
+server.listen(PORT, () => {
+  console.log(`🌐 HTTP sunucu ${PORT} portunda çalışıyor`);
+});
+
+// ─── BOT BAŞLANGIÇ ZAMANI ─────────────────────────────────────────
 const botStartTime = Date.now();
 
-// Sistem bilgileri
+// ─── SİSTEM BİLGİLERİ ─────────────────────────────────────────────
 function getSystemStats() {
   const totalMem = os.totalmem() / 1024 / 1024 / 1024;
   const freeMem = os.freemem() / 1024 / 1024 / 1024;
@@ -40,14 +56,14 @@ function getSystemStats() {
   };
 }
 
-// Progress bar
+// ─── PROGRESS BAR ─────────────────────────────────────────────────
 function createProgressBar(percent) {
   const filled = Math.floor(percent / 10);
   const empty = 10 - filled;
   return "█".repeat(filled) + "░".repeat(empty);
 }
 
-// Uptime format
+// ─── UPTIME FORMAT ────────────────────────────────────────────────
 function formatUptime(ms) {
   const seconds = Math.floor(ms / 1000);
   const days = Math.floor(seconds / 86400);
@@ -60,11 +76,14 @@ function formatUptime(ms) {
   return parts.join(" ") || "0d";
 }
 
+// ─── READY OLAYI ──────────────────────────────────────────────────
 client.on("ready", () => {
   console.log(`✅ ${client.user?.username} hazır!`);
   console.log(`📊 ${client.guilds.size} sunucu`);
+  console.log(`🆔 Bot ID: ${client.user?.id}`);
 });
 
+// ─── MESAJ OLAYI ──────────────────────────────────────────────────
 client.on("messageCreate", async (msg) => {
   if (msg.author.bot) return;
   if (!msg.content.startsWith("!")) return;
@@ -127,11 +146,18 @@ client.on("messageCreate", async (msg) => {
       .addFields(
         { name: "🏓 !ping", value: "Bot gecikmesi", inline: true },
         { name: "🖥️ !botmonitor", value: "Sistem durumu", inline: true },
-        { name: "📊 !botistatistik", value: "Bot istatistik", inline: true }
+        { name: "📊 !botistatistik", value: "Bot istatistik", inline: true },
+        { name: "❓ !yardim", value: "Bu menü", inline: true }
       )
       .setTimestamp();
     await msg.reply({ embeds: [embed] });
   }
 });
 
+// ─── HATA YAKALAMA ────────────────────────────────────────────────
+client.on("error", (err) => console.error("❌ Client error:", err.message));
+process.on("unhandledRejection", (err) => console.error("❌ Unhandled rejection:", err));
+
+// ─── BOTU BAŞLAT ──────────────────────────────────────────────────
+console.log("🚀 PingBot başlatılıyor...");
 client.login(process.env.BOT_TOKEN);

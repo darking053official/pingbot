@@ -2,9 +2,9 @@
   "name": "pingbot",
   "version": "1.0.0",
   "description": "Jubbio ping botu",
-  "main": "pingbot.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node pingbot.js"
+    "start": "node index.js"
   },
   "engines": {
     "node": "18.x"

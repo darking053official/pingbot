@@ -82,7 +82,6 @@ client.on("ready", () => {
   console.log(`📊 ${client.guilds.size} sunucu`);
   console.log(`🆔 Bot ID: ${client.user?.id}`);
   console.log(`📍 by DRK`);
-})
 });
 
 // ─── MESAJ OLAYI ──────────────────────────────────────────────────

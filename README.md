@@ -14,14 +14,17 @@
 Jubbio Platformu için Hafif ve Hızlı Ping Botu
 
 ---
+🔗 Linkler
+
+[`PingBot Logo`](https://github.com/darking053official/pingbot/blob/main/images%20(1).jpeg)
 
 [`Botu Ekle!`](https://jubbio.com/oauth2/authorize?client_id=616ef44c8c8f4b6e30ea8785f11ebfa4&response_type=code&scope=bot+applications.commands+applications.commands.permissions.update&permissions=8)
+
+[`Jubbio`](jubbio.com)
 
 ---
 
 ✨ Özellikler
-
-Özellik Açıklama
 
 🏓 Hızlı Ping Bot gecikmesini milisaniye cinsinden ölçer
 
@@ -50,7 +53,7 @@ Komut Ne Yapar?
 
 ---
 
-⚠️ ÖNEMLİ UYARI: BU BOTU VDS VEYA RENDER-GİTHUB BAĞLANTISI YAPIP KULLANMANIZ LAZIM VE ENVİRONMENT VARAİBLES KISMINA TOKENİNİZİ YAZMANIZ GEREKMEKTEDİR
+⚠️ ÖNEMLİ UYARI: BU BOTU KLONLARSANIZ VDS VEYA RENDER-GİTHUB BAĞLANTISI YAPIP KULLANMANIZ GEREKMEKTEDİR VE ENVİRONMENT VARAİBLES KISMINA TOKENİNİZİ YAZMANIZ GEREKMEKTEDİR
 
 ---
 

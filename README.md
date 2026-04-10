@@ -1,3 +1,14 @@
+<p align="center">
+  <img src="https://github.com/darking053official/pingbot/tree/main/logo.png" alt="PingBot" width="70" />
+</p>
+
+<h1 align="center">PingBot</h1>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/@jubbio/core"><img src="https://img.shields.io/npm/v/@jubbio/core?color=blue&label=%40jubbio%2Fcore" alt="npm @jubbio/core"></a>
+  <a href="https://github.com/jubbio/jubbio.js/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="License"></a>
+  <img src="https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen" alt="Node.js">
+</p>
 🤖 PingBot
 
 Jubbio Platformu için Hafif ve Hızlı Ping Botu

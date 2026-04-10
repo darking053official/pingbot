@@ -20,6 +20,8 @@ Jubbio Platformu için Hafif ve Hızlı Ping Botu
 
 [`Botu Ekle!`](https://jubbio.com/oauth2/authorize?client_id=616ef44c8c8f4b6e30ea8785f11ebfa4&response_type=code&scope=bot+applications.commands+applications.commands.permissions.update&permissions=8)
 
+[`Paketler`](https://github.com/darking053official/pingbot/releases/tag/PingBot)
+
 ---
 
 ✨ Özellikler

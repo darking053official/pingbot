@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/darking053official/pingbot/tree/main/logo.png" alt="PingBot" width="70" />
+  <img src="https://github.com/darking053official/pingbot/blob/main/images%20(1).jpeg" alt="PingBot" width="70" />
 </p>
 
 <h1 align="center">PingBot</h1>
@@ -19,10 +19,15 @@ Jubbio Platformu için Hafif ve Hızlı Ping Botu
 
 Özellik Açıklama
 🏓 Hızlı Ping Bot gecikmesini milisaniye cinsinden ölçer
+
 🖥️ Sistem Monitorü CPU, RAM, uptime bilgilerini gösterir
+
 📊 Bot İstatistik Sunucu sayısı, çalışma süresi, bot ID
+
 📟 Progress Bar CPU ve RAM kullanımını görsel çubukla gösterir
+
 🌐 HTTP Sunucu Render gibi platformlarda sağlık kontrolü için
+
 ⚡ Tüm Intent'ler Sorunsuz mesaj okuma ve yanıtlama
 
 ---
@@ -31,8 +36,11 @@ Jubbio Platformu için Hafif ve Hızlı Ping Botu
 
 Komut Ne Yapar?
 !ping Botun mesaj gecikmesini ölçer
+
 !botmonitor Sunucunun CPU, RAM ve uptime bilgilerini gösterir
+
 !botistatistik Botun sunucu sayısı, çalışma süresi gibi bilgileri gösterir
+
 !yardim Tüm komutları listeler
 
 ---

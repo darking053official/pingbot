@@ -22,6 +22,7 @@ Jubbio Platformu için Hafif ve Hızlı Ping Botu
 ✨ Özellikler
 
 Özellik Açıklama
+
 🏓 Hızlı Ping Bot gecikmesini milisaniye cinsinden ölçer
 
 🖥️ Sistem Monitorü CPU, RAM, uptime bilgilerini gösterir

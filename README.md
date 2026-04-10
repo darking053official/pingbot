@@ -9,14 +9,14 @@
   <a href="https://github.com/jubbio/jubbio.js/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="License"></a>
   <img src="https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen" alt="Node.js">
   <img src="https://img.shields.io/badge/PingBot-1.0.0-blue" alt="Node.js">
-    <img src="https://img.shields.io/badge/github-repo-blue?logo=github" alt="Node.js">
+    <img src="https://img.shields.io/badge/darking053official-PingBot-blue?logo=github" alt="Node.js">
 </p>
-🤖 PingBot
+  <img src="https://img.shields.io/badge/%F0%9F%A4%96PingBot-8A2BE2" alt="Node.js">
 
-Jubbio Platformu için Hafif ve Hızlı Ping Botu
+  <img src="https://img.shields.io/badge/Jubbio%20Platformu%20i%C3%A7in%20Hafif%20ve%20H%C4%B1zl%C4%B1%20Ping%20Botu-8A2BE2" alt="Node.js">
 
 ---
-🔗 Linkler
+  <img src="https://img.shields.io/badge/%F0%9F%94%97%20Linkler-8A2BE2" alt="Node.js">
 
 [`PingBot Logo`](https://github.com/darking053official/pingbot/blob/main/images%20(1).jpeg)
 
@@ -28,7 +28,8 @@ Jubbio Platformu için Hafif ve Hızlı Ping Botu
 
 ---
 
-✨ Özellikler
+ <img
+src=https://img.shields.io/badge/%E2%9C%A8%20%C3%96zellikler-8A2BE2 alt="Node.js">
 
 🏓 Hızlı Ping Bot gecikmesini milisaniye cinsinden ölçer
 
@@ -44,7 +45,8 @@ Jubbio Platformu için Hafif ve Hızlı Ping Botu
 
 ---
 
-🎮 Komutlar
+ <img
+src=https://img.shields.io/badge/🎮Komutlar-8A2BE2 alt="Node.js">
 
 Komut Ne Yapar?
 !ping Botun mesaj gecikmesini ölçer
@@ -61,7 +63,7 @@ Komut Ne Yapar?
 
 ---
 
-🖥️ Çıktı Örnekleri
+  <img src="https://img.shields.io/badge/%F0%9F%96%A5%EF%B8%8F%20%C3%87%C4%B1kt%C4%B1%20%C3%96rnekleri-8A2BE2" alt="Node.js">
 
 !ping
 
@@ -92,7 +94,7 @@ Komut Ne Yapar?
 
 ---
 
-🚀 Kurulum
+  <img src="https://img.shields.io/badge/🚀 Kurulum-8A2BE2" alt="Node.js">
 
 ```bash
 # 1. Bağımlılıkları yükle
@@ -104,7 +106,7 @@ node index.js
 
 ---
 
-🔧 Gereksinimler
+<img src="https://img.shields.io/badge/🔧 Gereksinimler-8A2BE2" alt="Node.js">
 
 Gereksinim Versiyon
 Node.js 18.x veya üzeri
@@ -112,10 +114,10 @@ Node.js 18.x veya üzeri
 
 ---
 
-📄 Lisans
+<img src="https://img.shields.io/badge/📄 Lisans-8A2BE2" alt="Node.js">
 
 MIT - İstediğiniz gibi kullanın, değiştirin, dağıtın.
 
 ---
 
-Made with ❤️ for DRK
+<img src="https://img.shields.io/badge/by-drk-brightgreen?style=for-the-badge-8A2BE2" alt="Node.js">

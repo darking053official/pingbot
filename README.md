@@ -22,6 +22,8 @@ Jubbio Platformu için Hafif ve Hızlı Ping Botu
 
 [`Paketler`](https://github.com/darking053official/pingbot/releases/tag/PingBot)
 
+[`Commits`](https://github.com/darking053official/pingbot/commits/PingBot)
+
 ---
 
 ✨ Özellikler

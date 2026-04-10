@@ -81,6 +81,8 @@ client.on("ready", () => {
   console.log(`✅ ${client.user?.username} hazır!`);
   console.log(`📊 ${client.guilds.size} sunucu`);
   console.log(`🆔 Bot ID: ${client.user?.id}`);
+  console.log(`📍 by DRK`);
+})
 });
 
 // ─── MESAJ OLAYI ──────────────────────────────────────────────────
@@ -95,7 +97,7 @@ client.on("messageCreate", async (msg) => {
     const start = Date.now();
     const m = await msg.reply("🏓 Ölçülüyor...");
     const ping = Date.now() - start;
-    await m.edit(`🏓 Pong! \`${ping}ms\``);
+    await m.edit(`🏓 Pong! by DRK \`${ping}ms\``);
   }
   
   // BOTMONITOR
@@ -105,7 +107,7 @@ client.on("messageCreate", async (msg) => {
     const ramBar = createProgressBar(parseFloat(stats.ram));
     
     const embed = new EmbedBuilder()
-      .setTitle("🖥️ Linux Server Monitor")
+      .setTitle("🖥️ PingBot Server Monitor by DRK")
       .setColor(Colors.Blue)
       .addFields(
         { name: "⏱️ Uptime", value: `\`${stats.uptime}\``, inline: false },
